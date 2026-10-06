@@ -1,0 +1,27 @@
+{
+  "service_name": "DevOps Health Monitor",
+  "version": "1.0.0",
+  "environment": "production",
+  "thresholds": {
+    "disk_usage_percent": 85,
+    "memory_usage_percent": 90,
+    "response_time_ms": 1000
+  },
+  "endpoints": [
+    {
+      "name": "Auth Service",
+      "url": "https://httpbin.org/status/200",
+      "expected_status": 200
+    },
+    {
+      "name": "Payment Gateway",
+      "url": "https://httpbin.org/status/200",
+      "expected_status": 200
+    },
+    {
+      "name": "Notification Service",
+      "url": "https://httpbin.org/status/200",
+      "expected_status": 200
+    }
+  ]
+}
